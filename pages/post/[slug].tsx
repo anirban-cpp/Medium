@@ -5,11 +5,9 @@ import { sanityClient, urlFor } from "../../sanity";
 import { IFormInput, Post, PostProps } from "../../typings";
 import PortableText from "react-portable-text";
 import { useForm, SubmitHandler } from "react-hook-form";
-import comment from "../../sanity-youtube/schemas/comment";
 import Comment from "../../components/Comment";
 
 const PostPage = ({ post }: PostProps) => {
-  console.log("post -> ",post)
   const [submitted, setSubmitted] = useState<boolean>(false);
 
   const {
