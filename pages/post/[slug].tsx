@@ -166,11 +166,13 @@ const PostPage = ({ post }: PostProps) => {
       <div className="flex flex-col p-10 my-10 max-w-2xl mx-auto shadow-yellow-500 shadow space-y-2">
         <h3 className="text-4xl">Comments</h3>
         <hr className="pb-2"/>
-        {
-          post.comments.map((comment) => (
-            <Comment comment={comment} key={comment._id}/>
-          ))
-        }
+        <div className="flex flex-col gap-4">
+          {
+            post.comments.map((comment) => (
+              <Comment comment={comment} key={comment._id}/>
+            ))
+          }
+        </div>
       </div>
     </main>
   );
